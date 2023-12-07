@@ -83,8 +83,6 @@ margin: 2px;
     document.addEventListener('DOMContentLoaded', function() {
         const output = document.getElementById('output');
         const buttons = document.getElementById('buttons');
-
-        // Set default textContent to '0'
         output.textContent = '0';
 
         buttons.addEventListener('click', function(e) {
@@ -98,10 +96,8 @@ margin: 2px;
                         output.textContent = 'Error';
                     }
                 } else if (buttonText === 'X') {
-                    // Delete the last character
                     output.textContent = output.textContent.slice(0, -1);
                 } else if (buttonText === 'AC') {
-                    // Reset to default value
                     output.textContent = '0';
                 } else {
                     if (!isNaN(buttonText) || buttonText === '.') {
@@ -115,7 +111,6 @@ margin: 2px;
 
         document.addEventListener('keydown', function(event) {
             if (event.code === "Backspace") {
-                // Delete the last character
                 output.textContent = output.textContent.slice(0, -1);
             }
         });
